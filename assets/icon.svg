@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Scripture Clock</title>
+  <desc id="desc">An open Bible with a clock in warm wood and gold colors.</desc>
+  <defs><linearGradient id="wood" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7a4324"/><stop offset=".5" stop-color="#35190d"/><stop offset="1" stop-color="#160a06"/></linearGradient><radialGradient id="glow" cx="50%" cy="42%" r="60%"><stop offset="0" stop-color="#e5c27b" stop-opacity=".18"/><stop offset="1" stop-color="#e5c27b" stop-opacity="0"/></radialGradient></defs>
+  <rect width="512" height="512" rx="112" fill="url(#wood)"/><rect x="24" y="24" width="464" height="464" rx="94" fill="url(#glow)" stroke="#c9a15d" stroke-opacity=".5" stroke-width="4"/>
+  <path d="M92 142c63-25 118-17 164 20v247c-46-37-101-45-164-20V142Z" fill="#24120b" stroke="#e5c27b" stroke-width="10" stroke-linejoin="round"/><path d="M420 142c-63-25-118-17-164 20v247c46-37 101-45 164-20V142Z" fill="#24120b" stroke="#e5c27b" stroke-width="10" stroke-linejoin="round"/><path d="M256 162v247" stroke="#e5c27b" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="256" cy="250" r="84" fill="#160b07" stroke="#f1d294" stroke-width="10"/><circle cx="256" cy="250" r="6" fill="#f1d294"/><path d="M256 203v49l35 25" fill="none" stroke="#f1d294" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M256 178v12M256 310v12M184 250h12M316 250h12" stroke="#c9a15d" stroke-width="7" stroke-linecap="round"/>
+</svg>
