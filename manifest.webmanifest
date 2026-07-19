@@ -1,0 +1,14 @@
+{
+  "name": "Scripture Clock — King James Version",
+  "short_name": "Scripture Clock",
+  "description": "A clock that tells time through Scripture: chapter equals the hour and verse equals the minute.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#120b08",
+  "theme_color": "#2b160d",
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
