@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2b160d" />
+  <meta name="description" content="Scripture Clock tells time through the King James Version: chapter equals the hour and verse equals the minute." />
+  <meta property="og:title" content="Scripture Clock — KJV" />
+  <meta property="og:description" content="Time, told through the Word. Chapter = hour. Verse = minute." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/social-preview.svg" />
+  <title>Scripture Clock — KJV</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar" aria-label="Scripture Clock controls">
+      <a class="brand" href="#" aria-label="Scripture Clock home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" role="img">
+            <path d="M8 11.5c5.8-2.3 11-1.6 16 2.1v25.2c-5-3.7-10.2-4.4-16-2.1V11.5Z" />
+            <path d="M40 11.5c-5.8-2.3-11-1.6-16 2.1v25.2c5-3.7 10.2-4.4 16-2.1V11.5Z" />
+            <circle cx="24" cy="21.5" r="8.4" />
+            <path d="M24 16.7v5.1l3.3 2.2" />
+          </svg>
+        </span>
+        <span><strong>Scripture Clock</strong><small>King James Version</small></span>
+      </a>
+      <div class="toolbar">
+        <button class="icon-button" id="soundButton" type="button" aria-pressed="false" title="Toggle minute chime"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Zm4.5 3.5a5 5 0 0 1 0 7M18 6a8.5 8.5 0 0 1 0 12" /></svg><span class="sr-only">Toggle minute chime</span></button>
+        <button class="icon-button" id="shareButton" type="button" title="Share this verse"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.5" /><circle cx="6" cy="12" r="2.5" /><circle cx="18" cy="19" r="2.5" /><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4" /></svg><span class="sr-only">Share this verse</span></button>
+        <button class="icon-button" id="fullscreenButton" type="button" title="Enter fullscreen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5" /></svg><span class="sr-only">Enter fullscreen</span></button>
+      </div>
+    </header>
+    <main class="clock-stage">
+      <section class="wood-clock" aria-labelledby="verseReference">
+        <div class="wood-grain" aria-hidden="true"></div><div class="corner corner-tl" aria-hidden="true"></div><div class="corner corner-tr" aria-hidden="true"></div><div class="corner corner-bl" aria-hidden="true"></div><div class="corner corner-br" aria-hidden="true"></div>
+        <div class="clock-face">
+          <p class="eyebrow">Time, told through the Word</p>
+          <div class="time-row" aria-label="Current time"><time id="digitalTime" datetime="">--:--</time><span id="meridiem">--</span></div>
+          <p id="dateLine" class="date-line">Loading your local time…</p>
+          <div class="rule" aria-hidden="true"><span></span></div>
+          <article class="verse-card" aria-live="polite" aria-busy="true"><div class="reference-row"><h1 id="verseReference">Loading Scripture…</h1><span id="matchBadge" class="match-badge">KJV</span></div><blockquote id="verseText">Preparing the Scripture Clock for its first reading.</blockquote><p id="fallbackNote" class="fallback-note" hidden></p></article>
+          <div class="formula" aria-label="How the Scripture Clock works"><div><span class="formula-label">Chapter</span><strong id="chapterNumber">—</strong><small>= hour</small></div><span class="formula-separator" aria-hidden="true">:</span><div><span class="formula-label">Verse</span><strong id="verseNumber">—</strong><small>= minute</small></div></div>
+          <div class="minute-progress" aria-hidden="true"><span id="minuteProgress"></span></div><p class="next-line">New reading in <span id="nextReading">--</span></p>
+        </div>
+      </section>
+      <section class="info-strip" aria-label="Scripture Clock information"><div class="stat"><span class="stat-icon" aria-hidden="true">✦</span><div><strong id="verseCount">Loading…</strong><small>KJV verses available</small></div></div><div class="stat"><span class="stat-icon" aria-hidden="true">⌖</span><div><strong id="timezoneName">Local time</strong><small>Your device timezone</small></div></div><div class="stat"><span class="stat-icon" aria-hidden="true">↻</span><div><strong>Every minute</strong><small>A fresh Scripture reading</small></div></div></section>
+      <section class="explanation" id="about"><div><p class="eyebrow dark">The idea</p><h2>Every minute points to Scripture.</h2></div><div class="explanation-copy"><p>The current hour becomes the chapter number, and the current minute becomes the verse number. At 3:16, the clock looks for a <strong>3:16</strong> reference—featuring <strong>John 3:16</strong> as its signature reading.</p><p>Because not every possible time exists as a Bible reference, continuous mode uses a clearly labeled chapter-matched reading whenever an exact KJV reference is unavailable. It never invents a verse.</p></div></section>
+    </main>
+    <footer><p>Scripture text: King James Version. Built as a quiet reminder to redeem the time.</p><button id="installButton" class="text-button" type="button" hidden>Install Scripture Clock</button></footer>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript">Scripture Clock requires JavaScript to update the verse with your local time.</div></noscript>
+  <script src="app.js" defer></script>
+</body>
+</html>
