@@ -4,21 +4,21 @@
   const MODELS=["Xenova/bge-small-en-v1.5","Xenova/all-MiniLM-L6-v2"];
   const AI_WAIT_MS=15000, FETCH_WAIT_MS=8000;
   const THEMES=[
-    {name:"Peace & anxiety",text:"peace anxiety worry stress calm troubled heart prayer fear rest",refs:["Philippians 4:6","John 14:27","Isaiah 26:3"]},
-    {name:"Fear & courage",text:"fear afraid courage bravery danger confidence power sound mind",refs:["Isaiah 41:10","Psalms 56:3","2 Timothy 1:7"]},
-    {name:"Grief & comfort",text:"grief death loss sadness mourning broken heart comfort sorrow heaven",refs:["Psalms 34:18","Matthew 5:4","Revelation 21:4"]},
-    {name:"Strength & endurance",text:"strength tired weak endurance perseverance keep going hard times energy",refs:["Philippians 4:13","Isaiah 40:31","Psalms 46:1"]},
-    {name:"Wisdom & decisions",text:"wisdom decision choices understanding knowledge discernment unsure what should I do",refs:["James 1:5","Proverbs 3:5","Proverbs 4:7"]},
-    {name:"Family & parenting",text:"family parenting children child father mother home marriage household raise teach kids",refs:["Proverbs 22:6","Joshua 24:15","Ephesians 6:4"]},
-    {name:"Work & purpose",text:"work job career purpose effort diligence labor serve excellence calling",refs:["Colossians 3:23","Proverbs 16:3","Ecclesiastes 9:10"]},
-    {name:"Faith & trust",text:"faith trust believe belief doubt God promise confidence unseen hearing word",refs:["Hebrews 11:1","Romans 10:17","Mark 11:24"]},
-    {name:"Forgiveness",text:"forgive forgiveness resentment hurt apology mercy grace forgive others",refs:["Ephesians 4:32","Colossians 3:13","Matthew 6:14"]},
+    {name:"Peace & anxiety",text:"peace anxiety anxious worry worried worrying nervous overwhelmed panic stress calm troubled heart prayer fear rest",refs:["Philippians 4:6","John 14:27","Isaiah 26:3"]},
+    {name:"Fear & courage",text:"fear afraid scared fearful courage bravery danger confidence power sound mind",refs:["Isaiah 41:10","Psalms 56:3","2 Timothy 1:7"]},
+    {name:"Grief & comfort",text:"grief grieving death loss sad sadness mourning broken heart comfort sorrow heaven",refs:["Psalms 34:18","Matthew 5:4","Revelation 21:4"]},
+    {name:"Strength & endurance",text:"strength tired exhausted weak endurance perseverance keep going hard times energy",refs:["Philippians 4:13","Isaiah 40:31","Psalms 46:1"]},
+    {name:"Wisdom & decisions",text:"wisdom decision choices understanding knowledge discernment unsure confused what should I do",refs:["James 1:5","Proverbs 3:5","Proverbs 4:7"]},
+    {name:"Family & parenting",text:"family parenting children child father mother home marriage household raise teach kids patience family",refs:["Proverbs 22:6","Joshua 24:15","Ephesians 6:4"]},
+    {name:"Work & purpose",text:"work job career purpose effort diligence labor serve excellence calling working hard",refs:["Colossians 3:23","Proverbs 16:3","Ecclesiastes 9:10"]},
+    {name:"Faith & trust",text:"faith trust believe belief doubt doubting God promise confidence unseen hearing word",refs:["Hebrews 11:1","Romans 10:17","Mark 11:24"]},
+    {name:"Forgiveness",text:"forgive forgiveness resentment hurt apology mercy grace forgive others bitterness",refs:["Ephesians 4:32","Colossians 3:13","Matthew 6:14"]},
     {name:"Love",text:"love kindness patience relationship marriage charity compassion how to love",refs:["1 Corinthians 13:4","1 Corinthians 13:7","John 3:16"]},
-    {name:"Hope & future",text:"hope future discouraged plans tomorrow purpose good future waiting",refs:["Jeremiah 29:11","Romans 15:13","Romans 8:28"]},
-    {name:"Temptation & self-control",text:"temptation addiction urge self control discipline sin escape resist",refs:["1 Corinthians 10:13","James 4:7","Matthew 26:41"]},
-    {name:"Anger & conflict",text:"anger mad conflict argument temper words fighting slow to anger listen",refs:["Proverbs 15:1","James 1:19","Ephesians 4:26"]},
-    {name:"Guidance",text:"guidance direction path where to go next step light path lead me decision",refs:["Psalms 119:105","Proverbs 3:5","James 1:5"]},
-    {name:"Gratitude & joy",text:"gratitude thankful thankfulness joy rejoice good day blessings contentment",refs:["1 Thessalonians 5:18","Psalms 118:24","Colossians 3:17"]}
+    {name:"Hope & future",text:"hope future discouraged discouragement plans tomorrow purpose good future waiting",refs:["Jeremiah 29:11","Romans 15:13","Romans 8:28"]},
+    {name:"Temptation & self-control",text:"temptation tempted addiction urge self control discipline sin escape resist",refs:["1 Corinthians 10:13","James 4:7","Matthew 26:41"]},
+    {name:"Anger & conflict",text:"anger angry mad frustrated conflict argument temper words fighting slow to anger listen",refs:["Proverbs 15:1","James 1:19","Ephesians 4:26"]},
+    {name:"Guidance",text:"guidance direction path where to go next step light path lead me decision direction",refs:["Psalms 119:105","Proverbs 3:5","James 1:5"]},
+    {name:"Gratitude & joy",text:"gratitude thankful thankfulness joy rejoice happy good day blessings contentment",refs:["1 Thessalonians 5:18","Psalms 118:24","Colossians 3:17"]}
   ];
   let bible=null,embedder=null,vectors=null,loading=null,activeModel=null,requestId=0;
   const esc=(v="")=>String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
