@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#2b160d" />
-  <meta name="description" content="Scripture Clock tells time through the King James Version: chapter equals the hour and verse equals the minute." />
+  <meta name="description" content="Scripture Clock tells time through the King James Version and includes grounded AI topic matching that only displays exact KJV text." />
   <meta property="og:title" content="Scripture Clock — KJV" />
   <meta property="og:description" content="Time, told through the Word. Chapter = hour. Verse = minute." />
   <meta property="og:type" content="website" />
@@ -14,6 +14,7 @@
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="ai-scripture.css" />
 </head>
 <body>
   <div class="page-shell">
@@ -56,5 +57,6 @@
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <noscript><div class="noscript">Scripture Clock requires JavaScript to update the verse with your local time.</div></noscript>
   <script src="app.js" defer></script>
+  <script src="ai-scripture.js?v=1" defer></script>
 </body>
 </html>
